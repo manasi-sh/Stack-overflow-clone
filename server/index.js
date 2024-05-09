@@ -28,8 +28,8 @@ app.get('/',(req,res)=>{
 
 const PORT = process.env.PORT || 5000;
 
-const DATABASE_URL = process.env.CONNECTION_URL
-//const DATABASE_URL = "mongodb+srv://admin:admin@stack-overflow-clone.p1irn7q.mongodb.net/?retryWrites=true&w=majority"
+//const DATABASE_URL = process.env.CONNECTION_URL
+const DATABASE_URL = "mongodb+srv://admin:admin@stack-overflow-clone.p1irn7q.mongodb.net/?retryWrites=true&w=majority"
 mongoose.connect(DATABASE_URL, {useNewUrlParser: true, useUnifiedTopology:true})
     .then(()=>app.listen(PORT, ()=>{console.log(`server running on port ${PORT}`)}))
     .catch((err)=>console.log(err.message))
